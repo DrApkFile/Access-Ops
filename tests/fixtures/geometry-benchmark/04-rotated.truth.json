@@ -1,0 +1,119 @@
+{
+  "id": "04-rotated",
+  "image": "04-rotated.png",
+  "synthetic": true,
+  "widthPx": 680,
+  "heightPx": 540,
+  "units": "m",
+  "pixelsPerMeter": 80,
+  "rotationDegrees": 15,
+  "rooms": [
+    {
+      "id": "room-a",
+      "label": "ROOM A",
+      "polygon": [
+        {
+          "x": 149.589,
+          "y": 43.335
+        },
+        {
+          "x": 535.959,
+          "y": 146.863
+        },
+        {
+          "x": 473.843,
+          "y": 378.685
+        },
+        {
+          "x": 87.472,
+          "y": 275.157
+        }
+      ],
+      "dimensions": {
+        "width": 5,
+        "height": 3
+      }
+    }
+  ],
+  "walls": [
+    {
+      "id": "wall-0",
+      "a": {
+        "x": 149.589,
+        "y": 43.335
+      },
+      "b": {
+        "x": 535.959,
+        "y": 146.863
+      }
+    },
+    {
+      "id": "wall-1",
+      "a": {
+        "x": 535.959,
+        "y": 146.863
+      },
+      "b": {
+        "x": 473.843,
+        "y": 378.685
+      }
+    },
+    {
+      "id": "wall-2",
+      "a": {
+        "x": 473.843,
+        "y": 378.685
+      },
+      "b": {
+        "x": 87.472,
+        "y": 275.157
+      }
+    },
+    {
+      "id": "wall-3",
+      "a": {
+        "x": 87.472,
+        "y": 275.157
+      },
+      "b": {
+        "x": 149.589,
+        "y": 43.335
+      }
+    }
+  ],
+  "doors": [
+    {
+      "id": "entry",
+      "at": {
+        "x": 280.657,
+        "y": 326.921
+      },
+      "width": 80,
+      "wallId": "wall-2",
+      "direction": null,
+      "ambiguous": false
+    }
+  ],
+  "annotations": [
+    {
+      "roomId": "room-a",
+      "axis": "width",
+      "value": 5,
+      "unit": "m"
+    },
+    {
+      "roomId": "room-a",
+      "axis": "height",
+      "value": 3,
+      "unit": "m"
+    }
+  ],
+  "missing": [],
+  "expectedReview": [],
+  "expectedValidation": "valid",
+  "coordinateUnits": "source_pixels",
+  "doorWidthUnit": "px",
+  "roomDimensionUnit": "m",
+  "doorDirectionSupport": "not_supported_by_existing_schema",
+  "coordinateContract": "Original image pixels, origin top-left; identity alignment only. Known drawing rotation is retained, never fitted away."
+}

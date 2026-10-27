@@ -1,0 +1,111 @@
+{
+  "id": "08-unknown-scale",
+  "image": "08-unknown-scale.png",
+  "synthetic": true,
+  "widthPx": 680,
+  "heightPx": 540,
+  "units": "px",
+  "pixelsPerMeter": null,
+  "rotationDegrees": 0,
+  "rooms": [
+    {
+      "id": "room-a",
+      "label": "ROOM A",
+      "polygon": [
+        {
+          "x": 100,
+          "y": 100
+        },
+        {
+          "x": 500,
+          "y": 100
+        },
+        {
+          "x": 500,
+          "y": 340
+        },
+        {
+          "x": 100,
+          "y": 340
+        }
+      ],
+      "dimensions": {
+        "width": 400,
+        "height": 240
+      }
+    }
+  ],
+  "walls": [
+    {
+      "id": "wall-0",
+      "a": {
+        "x": 100,
+        "y": 100
+      },
+      "b": {
+        "x": 500,
+        "y": 100
+      }
+    },
+    {
+      "id": "wall-1",
+      "a": {
+        "x": 500,
+        "y": 100
+      },
+      "b": {
+        "x": 500,
+        "y": 340
+      }
+    },
+    {
+      "id": "wall-2",
+      "a": {
+        "x": 500,
+        "y": 340
+      },
+      "b": {
+        "x": 100,
+        "y": 340
+      }
+    },
+    {
+      "id": "wall-3",
+      "a": {
+        "x": 100,
+        "y": 340
+      },
+      "b": {
+        "x": 100,
+        "y": 100
+      }
+    }
+  ],
+  "doors": [
+    {
+      "id": "entry",
+      "at": {
+        "x": 300,
+        "y": 340
+      },
+      "width": 80,
+      "wallId": "wall-2",
+      "direction": null,
+      "ambiguous": false
+    }
+  ],
+  "annotations": [],
+  "missing": [
+    "physical_scale",
+    "physical_dimensions"
+  ],
+  "expectedReview": [
+    "scale_unknown"
+  ],
+  "expectedValidation": "needs_review",
+  "coordinateUnits": "source_pixels",
+  "doorWidthUnit": "px",
+  "roomDimensionUnit": "px",
+  "doorDirectionSupport": "not_supported_by_existing_schema",
+  "coordinateContract": "Original image pixels, origin top-left; identity alignment only. Known drawing rotation is retained, never fitted away."
+}

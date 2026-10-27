@@ -1,0 +1,179 @@
+{
+  "id": "02-connected",
+  "image": "02-connected.png",
+  "synthetic": true,
+  "widthPx": 680,
+  "heightPx": 540,
+  "units": "m",
+  "pixelsPerMeter": 80,
+  "rotationDegrees": 0,
+  "rooms": [
+    {
+      "id": "room-a",
+      "label": "ROOM A",
+      "polygon": [
+        {
+          "x": 100,
+          "y": 100
+        },
+        {
+          "x": 340,
+          "y": 100
+        },
+        {
+          "x": 340,
+          "y": 340
+        },
+        {
+          "x": 100,
+          "y": 340
+        }
+      ],
+      "dimensions": {
+        "width": 3,
+        "height": 3
+      }
+    },
+    {
+      "id": "room-b",
+      "label": "ROOM B",
+      "polygon": [
+        {
+          "x": 340,
+          "y": 100
+        },
+        {
+          "x": 580,
+          "y": 100
+        },
+        {
+          "x": 580,
+          "y": 340
+        },
+        {
+          "x": 340,
+          "y": 340
+        }
+      ],
+      "dimensions": {
+        "width": 3,
+        "height": 3
+      }
+    }
+  ],
+  "walls": [
+    {
+      "id": "wall-0",
+      "a": {
+        "x": 100,
+        "y": 100
+      },
+      "b": {
+        "x": 580,
+        "y": 100
+      }
+    },
+    {
+      "id": "wall-1",
+      "a": {
+        "x": 580,
+        "y": 100
+      },
+      "b": {
+        "x": 580,
+        "y": 340
+      }
+    },
+    {
+      "id": "wall-2",
+      "a": {
+        "x": 580,
+        "y": 340
+      },
+      "b": {
+        "x": 100,
+        "y": 340
+      }
+    },
+    {
+      "id": "wall-3",
+      "a": {
+        "x": 100,
+        "y": 340
+      },
+      "b": {
+        "x": 100,
+        "y": 100
+      }
+    },
+    {
+      "id": "partition",
+      "a": {
+        "x": 340,
+        "y": 100
+      },
+      "b": {
+        "x": 340,
+        "y": 340
+      }
+    }
+  ],
+  "doors": [
+    {
+      "id": "entry",
+      "at": {
+        "x": 220,
+        "y": 340
+      },
+      "width": 80,
+      "wallId": "wall-2",
+      "direction": null,
+      "ambiguous": false
+    },
+    {
+      "id": "connection",
+      "at": {
+        "x": 340,
+        "y": 220
+      },
+      "width": 80,
+      "wallId": "partition",
+      "direction": null,
+      "ambiguous": false
+    }
+  ],
+  "annotations": [
+    {
+      "roomId": "room-a",
+      "axis": "width",
+      "value": 3,
+      "unit": "m"
+    },
+    {
+      "roomId": "room-a",
+      "axis": "height",
+      "value": 3,
+      "unit": "m"
+    },
+    {
+      "roomId": "room-b",
+      "axis": "width",
+      "value": 3,
+      "unit": "m"
+    },
+    {
+      "roomId": "room-b",
+      "axis": "height",
+      "value": 3,
+      "unit": "m"
+    }
+  ],
+  "missing": [],
+  "expectedReview": [],
+  "expectedValidation": "valid",
+  "coordinateUnits": "source_pixels",
+  "doorWidthUnit": "px",
+  "roomDimensionUnit": "m",
+  "doorDirectionSupport": "not_supported_by_existing_schema",
+  "coordinateContract": "Original image pixels, origin top-left; identity alignment only. Known drawing rotation is retained, never fitted away."
+}

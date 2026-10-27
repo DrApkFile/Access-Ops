@@ -1,0 +1,1 @@
+ALTER TABLE "ao_buildings" ADD COLUMN "category" text DEFAULT 'building' NOT NULL;

@@ -1,0 +1,217 @@
+[
+  {
+    "op": "delete",
+    "id": "w-1"
+  },
+  {
+    "op": "delete",
+    "id": "w-2"
+  },
+  {
+    "op": "delete",
+    "id": "w-3"
+  },
+  {
+    "op": "delete",
+    "id": "w-4"
+  },
+  {
+    "op": "delete",
+    "id": "w-5"
+  },
+  {
+    "op": "delete",
+    "id": "w-6"
+  },
+  {
+    "op": "delete",
+    "id": "w-7"
+  },
+  {
+    "op": "delete",
+    "id": "w-8"
+  },
+  {
+    "op": "delete",
+    "id": "d-1"
+  },
+  {
+    "op": "delete",
+    "id": "d-2"
+  },
+  {
+    "op": "delete",
+    "id": "r-1"
+  },
+  {
+    "op": "delete",
+    "id": "r-2"
+  },
+  {
+    "op": "add",
+    "element": {
+      "id": "review-wall-0",
+      "a": {
+        "x": 100,
+        "y": 100
+      },
+      "b": {
+        "x": 580,
+        "y": 100
+      },
+      "kind": "wall",
+      "thickness": 8,
+      "confidence": 1
+    }
+  },
+  {
+    "op": "add",
+    "element": {
+      "id": "review-wall-1",
+      "a": {
+        "x": 580,
+        "y": 100
+      },
+      "b": {
+        "x": 580,
+        "y": 340
+      },
+      "kind": "wall",
+      "thickness": 8,
+      "confidence": 1
+    }
+  },
+  {
+    "op": "add",
+    "element": {
+      "id": "review-wall-2",
+      "a": {
+        "x": 580,
+        "y": 340
+      },
+      "b": {
+        "x": 100,
+        "y": 340
+      },
+      "kind": "wall",
+      "thickness": 8,
+      "confidence": 1
+    }
+  },
+  {
+    "op": "add",
+    "element": {
+      "id": "review-wall-3",
+      "a": {
+        "x": 100,
+        "y": 340
+      },
+      "b": {
+        "x": 100,
+        "y": 100
+      },
+      "kind": "wall",
+      "thickness": 8,
+      "confidence": 1
+    }
+  },
+  {
+    "op": "add",
+    "element": {
+      "id": "review-partition",
+      "a": {
+        "x": 340,
+        "y": 100
+      },
+      "b": {
+        "x": 340,
+        "y": 340
+      },
+      "kind": "wall",
+      "thickness": 8,
+      "confidence": 1
+    }
+  },
+  {
+    "op": "add",
+    "element": {
+      "id": "r-1",
+      "kind": "room",
+      "label": "ROOM A",
+      "polygon": [
+        {
+          "x": 100,
+          "y": 100
+        },
+        {
+          "x": 340,
+          "y": 100
+        },
+        {
+          "x": 340,
+          "y": 340
+        },
+        {
+          "x": 100,
+          "y": 340
+        }
+      ],
+      "confidence": 1
+    }
+  },
+  {
+    "op": "add",
+    "element": {
+      "id": "r-2",
+      "kind": "room",
+      "label": "ROOM B",
+      "polygon": [
+        {
+          "x": 340,
+          "y": 100
+        },
+        {
+          "x": 580,
+          "y": 100
+        },
+        {
+          "x": 580,
+          "y": 340
+        },
+        {
+          "x": 340,
+          "y": 340
+        }
+      ],
+      "confidence": 1
+    }
+  },
+  {
+    "op": "add",
+    "element": {
+      "id": "review-entry",
+      "kind": "door",
+      "at": {
+        "x": 220,
+        "y": 340
+      },
+      "width": 80,
+      "wallId": "review-wall-2",
+      "confidence": 1
+    }
+  },
+  {
+    "op": "add",
+    "element": {
+      "id": "review-connection",
+      "kind": "door",
+      "at": {
+        "x": 340,
+        "y": 220
+      },
+      "width": 80,
+      "wallId": "review-partition",
+      "confidence": 1
+    }
+  }
+]

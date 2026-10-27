@@ -1,0 +1,337 @@
+{
+  "at": "2026-10-27T22:49:08.584Z",
+  "classification": "LIVE_EXTERNAL",
+  "fingerprint": "25ca8a0be255caf1f63ae87a0104cfa42d86ffcaf3ce7a343ce927991a8d2574",
+  "sourceHash": "a36f2da184b092b7084220a9f6b4e0fa561a8fda27fd91037b1f8a727917158e",
+  "model": {
+    "schemaVersion": 1,
+    "title": null,
+    "plan": {
+      "widthPx": 680,
+      "heightPx": 540,
+      "pixelsPerMeter": null,
+      "north": null
+    },
+    "walls": [
+      {
+        "id": "w-1",
+        "kind": "wall",
+        "a": {
+          "x": 96,
+          "y": 100
+        },
+        "b": {
+          "x": 496,
+          "y": 100
+        },
+        "thickness": 16,
+        "confidence": 0.95
+      },
+      {
+        "id": "w-2",
+        "kind": "wall",
+        "a": {
+          "x": 496,
+          "y": 100
+        },
+        "b": {
+          "x": 496,
+          "y": 340
+        },
+        "thickness": 16,
+        "confidence": 0.95
+      },
+      {
+        "id": "w-3",
+        "kind": "wall",
+        "a": {
+          "x": 496,
+          "y": 340
+        },
+        "b": {
+          "x": 344,
+          "y": 340
+        },
+        "thickness": 16,
+        "confidence": 0.95
+      },
+      {
+        "id": "w-4",
+        "kind": "wall",
+        "a": {
+          "x": 344,
+          "y": 340
+        },
+        "b": {
+          "x": 264,
+          "y": 340
+        },
+        "thickness": 16,
+        "confidence": 0.95
+      },
+      {
+        "id": "w-5",
+        "kind": "wall",
+        "a": {
+          "x": 264,
+          "y": 340
+        },
+        "b": {
+          "x": 96,
+          "y": 340
+        },
+        "thickness": 16,
+        "confidence": 0.95
+      },
+      {
+        "id": "w-6",
+        "kind": "wall",
+        "a": {
+          "x": 96,
+          "y": 340
+        },
+        "b": {
+          "x": 96,
+          "y": 100
+        },
+        "thickness": 16,
+        "confidence": 0.95
+      }
+    ],
+    "openings": [
+      {
+        "id": "d-1",
+        "kind": "door",
+        "at": {
+          "x": 304,
+          "y": 340
+        },
+        "width": 80,
+        "wallId": "w-4",
+        "confidence": 0.9
+      }
+    ],
+    "rooms": [
+      {
+        "id": "r-1",
+        "kind": "room",
+        "polygon": [
+          {
+            "x": 96,
+            "y": 100
+          },
+          {
+            "x": 496,
+            "y": 100
+          },
+          {
+            "x": 496,
+            "y": 340
+          },
+          {
+            "x": 344,
+            "y": 340
+          },
+          {
+            "x": 344,
+            "y": 260
+          },
+          {
+            "x": 264,
+            "y": 260
+          },
+          {
+            "x": 264,
+            "y": 340
+          },
+          {
+            "x": 96,
+            "y": 340
+          }
+        ],
+        "label": "ROOM A",
+        "confidence": 0.95
+      }
+    ],
+    "features": [],
+    "furniture": [],
+    "paths": [],
+    "roads": [],
+    "geometryEvidence": {
+      "version": 1,
+      "features": [
+        {
+          "elementId": "w-1",
+          "origin": "extracted",
+          "state": "unreviewed",
+          "reasons": [],
+          "note": "Identified by vision; coordinates are unreviewed pixel estimates, not surveyed measurements."
+        },
+        {
+          "elementId": "w-2",
+          "origin": "extracted",
+          "state": "unreviewed",
+          "reasons": [],
+          "note": "Identified by vision; coordinates are unreviewed pixel estimates, not surveyed measurements."
+        },
+        {
+          "elementId": "w-3",
+          "origin": "extracted",
+          "state": "unreviewed",
+          "reasons": [],
+          "note": "Identified by vision; coordinates are unreviewed pixel estimates, not surveyed measurements."
+        },
+        {
+          "elementId": "w-4",
+          "origin": "extracted",
+          "state": "unreviewed",
+          "reasons": [],
+          "note": "Identified by vision; coordinates are unreviewed pixel estimates, not surveyed measurements."
+        },
+        {
+          "elementId": "w-5",
+          "origin": "extracted",
+          "state": "unreviewed",
+          "reasons": [],
+          "note": "Identified by vision; coordinates are unreviewed pixel estimates, not surveyed measurements."
+        },
+        {
+          "elementId": "w-6",
+          "origin": "extracted",
+          "state": "unreviewed",
+          "reasons": [],
+          "note": "Identified by vision; coordinates are unreviewed pixel estimates, not surveyed measurements."
+        },
+        {
+          "elementId": "d-1",
+          "origin": "extracted",
+          "state": "unreviewed",
+          "reasons": [],
+          "note": "Identified by vision; coordinates are unreviewed pixel estimates, not surveyed measurements."
+        },
+        {
+          "elementId": "r-1",
+          "origin": "extracted",
+          "state": "unreviewed",
+          "reasons": [],
+          "note": "Identified by vision; coordinates are unreviewed pixel estimates, not surveyed measurements."
+        }
+      ],
+      "measurements": [
+        {
+          "id": "plan-scale",
+          "targetId": null,
+          "kind": "scale",
+          "value": null,
+          "unit": "px/m",
+          "origin": "inferred",
+          "state": "needs_review",
+          "reasons": [
+            "scale_unknown"
+          ],
+          "note": "No reliable physical scale is established. Relative pixel geometry remains available."
+        },
+        {
+          "id": "r-1-room_width",
+          "targetId": "r-1",
+          "kind": "room_width",
+          "value": null,
+          "unit": "m",
+          "origin": "inferred",
+          "state": "needs_review",
+          "reasons": [
+            "dimension_missing"
+          ],
+          "note": "No direct annotation captured. A dimension can be derived after scale is reviewed; no exact measurement has been invented."
+        },
+        {
+          "id": "r-1-room_height",
+          "targetId": "r-1",
+          "kind": "room_height",
+          "value": null,
+          "unit": "m",
+          "origin": "inferred",
+          "state": "needs_review",
+          "reasons": [
+            "dimension_missing"
+          ],
+          "note": "No direct annotation captured. A dimension can be derived after scale is reviewed; no exact measurement has been invented."
+        }
+      ]
+    }
+  },
+  "executions": [
+    {
+      "provider": "openrouter",
+      "requestedModel": "nvidia/nemotron-3.5-super-vl:free",
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "servingProvider": "Nvidia",
+      "requestId": "gen-1793141312-YCEle6rETy1ZaG5naH4q",
+      "capability": "vision",
+      "execution": "live",
+      "durationMs": 4500,
+      "completedAt": "2026-10-27T22:48:35.804Z",
+      "httpStatus": 200,
+      "reportedCost": 0,
+      "inputImages": [
+        {
+          "sourceSha256": "a36f2da184b092b7084220a9f6b4e0fa561a8fda27fd91037b1f8a727917158e",
+          "sentSha256": "d9987f54301465b7d103bd460eab02c6c49cfd3865b92c17e8f6a8c80ac49c5d",
+          "width": 680,
+          "height": 540,
+          "sourceMime": "image/png"
+        }
+      ],
+      "responseTextSha256": "e8e29e02da2444fda44d1467564528655dfe6e5232e8793805951a9dc9cbd27c",
+      "geometryReviewed": false
+    },
+    {
+      "provider": "openrouter",
+      "requestedModel": "nvidia/nemotron-3.5-super-vl:free",
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "servingProvider": "Nvidia",
+      "requestId": "gen-1793141321-pZMCVg15kigS1XZ5ljaH",
+      "capability": "vision",
+      "execution": "live",
+      "durationMs": 3751,
+      "completedAt": "2026-10-27T22:48:44.560Z",
+      "httpStatus": 200,
+      "reportedCost": 0,
+      "inputImages": [
+        {
+          "sourceSha256": "a36f2da184b092b7084220a9f6b4e0fa561a8fda27fd91037b1f8a727917158e",
+          "sentSha256": "d9987f54301465b7d103bd460eab02c6c49cfd3865b92c17e8f6a8c80ac49c5d",
+          "width": 680,
+          "height": 540,
+          "sourceMime": "image/png"
+        }
+      ],
+      "responseTextSha256": "a6512ef3c98651e0015cc8e29642beea1d11b123539802c22e68640bd6b4a4d7",
+      "geometryReviewed": false
+    },
+    {
+      "provider": "openrouter",
+      "requestedModel": "nvidia/nemotron-3.5-super-vl:free",
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "servingProvider": "Nvidia",
+      "requestId": "gen-1793141345-3EuECCDo09j9xTsCf4jm",
+      "capability": "vision",
+      "execution": "live",
+      "durationMs": 4018,
+      "completedAt": "2026-10-27T22:49:08.582Z",
+      "httpStatus": 200,
+      "reportedCost": 0,
+      "inputImages": [
+        {
+          "sourceSha256": "a36f2da184b092b7084220a9f6b4e0fa561a8fda27fd91037b1f8a727917158e",
+          "sentSha256": "d9987f54301465b7d103bd460eab02c6c49cfd3865b92c17e8f6a8c80ac49c5d",
+          "width": 680,
+          "height": 540,
+          "sourceMime": "image/png"
+        }
+      ],
+      "responseTextSha256": "89f9ef6b5500713c81b3524d990076129548ba0aad1856faa3b31a9f3ff30e1a",
+      "geometryReviewed": false
+    }
+  ]
+}

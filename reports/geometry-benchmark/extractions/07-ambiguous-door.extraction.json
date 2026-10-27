@@ -1,0 +1,251 @@
+{
+  "at": "2026-10-27T22:48:30.757Z",
+  "classification": "LIVE_EXTERNAL",
+  "fingerprint": "07b8829141651592b318a7b13150a237990095ad10dc6d51e1887abd40cc889b",
+  "sourceHash": "5276d8f6408ec8b3bf321635ad684e85f1afc97abf6a32616003d67ba2c229de",
+  "model": {
+    "schemaVersion": 1,
+    "title": null,
+    "plan": {
+      "widthPx": 680,
+      "heightPx": 540,
+      "pixelsPerMeter": null,
+      "north": null
+    },
+    "walls": [
+      {
+        "id": "w-1",
+        "kind": "wall",
+        "a": {
+          "x": 95,
+          "y": 100
+        },
+        "b": {
+          "x": 495,
+          "y": 100
+        },
+        "thickness": 20,
+        "confidence": 0.95
+      },
+      {
+        "id": "w-2",
+        "kind": "wall",
+        "a": {
+          "x": 495,
+          "y": 100
+        },
+        "b": {
+          "x": 495,
+          "y": 340
+        },
+        "thickness": 20,
+        "confidence": 0.95
+      },
+      {
+        "id": "w-3",
+        "kind": "wall",
+        "a": {
+          "x": 495,
+          "y": 340
+        },
+        "b": {
+          "x": 350,
+          "y": 340
+        },
+        "thickness": 20,
+        "confidence": 0.95
+      },
+      {
+        "id": "w-4",
+        "kind": "wall",
+        "a": {
+          "x": 250,
+          "y": 340
+        },
+        "b": {
+          "x": 95,
+          "y": 340
+        },
+        "thickness": 20,
+        "confidence": 0.95
+      },
+      {
+        "id": "w-5",
+        "kind": "wall",
+        "a": {
+          "x": 95,
+          "y": 340
+        },
+        "b": {
+          "x": 95,
+          "y": 100
+        },
+        "thickness": 20,
+        "confidence": 0.95
+      }
+    ],
+    "openings": [
+      {
+        "id": "d-1",
+        "kind": "door",
+        "at": {
+          "x": 300,
+          "y": 340
+        },
+        "width": 100,
+        "wallId": "w-3",
+        "confidence": 0.4
+      }
+    ],
+    "rooms": [
+      {
+        "id": "r-1",
+        "kind": "room",
+        "polygon": [
+          {
+            "x": 95,
+            "y": 100
+          },
+          {
+            "x": 495,
+            "y": 100
+          },
+          {
+            "x": 495,
+            "y": 340
+          },
+          {
+            "x": 95,
+            "y": 340
+          }
+        ],
+        "label": "ROOM A",
+        "confidence": 0.85
+      }
+    ],
+    "features": [],
+    "furniture": [],
+    "paths": [],
+    "roads": [],
+    "geometryEvidence": {
+      "version": 1,
+      "features": [
+        {
+          "elementId": "w-1",
+          "origin": "extracted",
+          "state": "unreviewed",
+          "reasons": [],
+          "note": "Identified by vision; coordinates are unreviewed pixel estimates, not surveyed measurements."
+        },
+        {
+          "elementId": "w-2",
+          "origin": "extracted",
+          "state": "unreviewed",
+          "reasons": [],
+          "note": "Identified by vision; coordinates are unreviewed pixel estimates, not surveyed measurements."
+        },
+        {
+          "elementId": "w-3",
+          "origin": "extracted",
+          "state": "unreviewed",
+          "reasons": [],
+          "note": "Identified by vision; coordinates are unreviewed pixel estimates, not surveyed measurements."
+        },
+        {
+          "elementId": "w-4",
+          "origin": "extracted",
+          "state": "unreviewed",
+          "reasons": [],
+          "note": "Identified by vision; coordinates are unreviewed pixel estimates, not surveyed measurements."
+        },
+        {
+          "elementId": "w-5",
+          "origin": "extracted",
+          "state": "unreviewed",
+          "reasons": [],
+          "note": "Identified by vision; coordinates are unreviewed pixel estimates, not surveyed measurements."
+        },
+        {
+          "elementId": "d-1",
+          "origin": "extracted",
+          "state": "needs_review",
+          "reasons": [
+            "low_confidence",
+            "door_ambiguous"
+          ],
+          "note": "Identified by vision; coordinates are unreviewed pixel estimates, not surveyed measurements."
+        },
+        {
+          "elementId": "r-1",
+          "origin": "extracted",
+          "state": "unreviewed",
+          "reasons": [],
+          "note": "Identified by vision; coordinates are unreviewed pixel estimates, not surveyed measurements."
+        }
+      ],
+      "measurements": [
+        {
+          "id": "plan-scale",
+          "targetId": null,
+          "kind": "scale",
+          "value": 80,
+          "unit": "px/m",
+          "origin": "extracted",
+          "state": "needs_review",
+          "reasons": [
+            "scale_unreviewed"
+          ],
+          "note": "Model read/derived: 80 pixels = 1 m; confirm calibration before using physical dimensions."
+        },
+        {
+          "id": "r-1-room_width",
+          "targetId": "r-1",
+          "kind": "room_width",
+          "value": 5,
+          "unit": "m",
+          "origin": "extracted",
+          "state": "needs_review",
+          "reasons": [],
+          "note": "Unverified model annotation: 5.00 m"
+        },
+        {
+          "id": "r-1-room_height",
+          "targetId": "r-1",
+          "kind": "room_height",
+          "value": 3,
+          "unit": "m",
+          "origin": "extracted",
+          "state": "needs_review",
+          "reasons": [],
+          "note": "Unverified model annotation: 3.00 m"
+        }
+      ]
+    }
+  },
+  "executions": [
+    {
+      "provider": "openrouter",
+      "requestedModel": "nvidia/nemotron-3.5-super-vl:free",
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "servingProvider": "Nvidia",
+      "requestId": "gen-1793141299-kC6soIEVCv3wXUv1sVWM",
+      "capability": "vision",
+      "execution": "live",
+      "durationMs": 12342,
+      "completedAt": "2026-10-27T22:48:30.754Z",
+      "httpStatus": 200,
+      "reportedCost": 0,
+      "inputImages": [
+        {
+          "sourceSha256": "5276d8f6408ec8b3bf321635ad684e85f1afc97abf6a32616003d67ba2c229de",
+          "sentSha256": "989bef60d8dd228b3fa455eb8ba829f02633ef1b437ffeee52bfad47da259740",
+          "width": 680,
+          "height": 540,
+          "sourceMime": "image/png"
+        }
+      ],
+      "responseTextSha256": "7d1bd69079eb1a37e0ce89857db0fd3806637c878fc4348b706114a052bb6235",
+      "geometryReviewed": false
+    }
+  ]
+}

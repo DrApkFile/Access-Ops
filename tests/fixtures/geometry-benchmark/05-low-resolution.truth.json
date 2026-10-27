@@ -1,0 +1,119 @@
+{
+  "id": "05-low-resolution",
+  "image": "05-low-resolution.png",
+  "synthetic": true,
+  "widthPx": 340,
+  "heightPx": 270,
+  "units": "m",
+  "pixelsPerMeter": 40,
+  "rotationDegrees": 0,
+  "rooms": [
+    {
+      "id": "room-a",
+      "label": "ROOM A",
+      "polygon": [
+        {
+          "x": 50,
+          "y": 50
+        },
+        {
+          "x": 250,
+          "y": 50
+        },
+        {
+          "x": 250,
+          "y": 170
+        },
+        {
+          "x": 50,
+          "y": 170
+        }
+      ],
+      "dimensions": {
+        "width": 5,
+        "height": 3
+      }
+    }
+  ],
+  "walls": [
+    {
+      "id": "wall-0",
+      "a": {
+        "x": 50,
+        "y": 50
+      },
+      "b": {
+        "x": 250,
+        "y": 50
+      }
+    },
+    {
+      "id": "wall-1",
+      "a": {
+        "x": 250,
+        "y": 50
+      },
+      "b": {
+        "x": 250,
+        "y": 170
+      }
+    },
+    {
+      "id": "wall-2",
+      "a": {
+        "x": 250,
+        "y": 170
+      },
+      "b": {
+        "x": 50,
+        "y": 170
+      }
+    },
+    {
+      "id": "wall-3",
+      "a": {
+        "x": 50,
+        "y": 170
+      },
+      "b": {
+        "x": 50,
+        "y": 50
+      }
+    }
+  ],
+  "doors": [
+    {
+      "id": "entry",
+      "at": {
+        "x": 150,
+        "y": 170
+      },
+      "width": 40,
+      "wallId": "wall-2",
+      "direction": null,
+      "ambiguous": false
+    }
+  ],
+  "annotations": [
+    {
+      "roomId": "room-a",
+      "axis": "width",
+      "value": 5,
+      "unit": "m"
+    },
+    {
+      "roomId": "room-a",
+      "axis": "height",
+      "value": 3,
+      "unit": "m"
+    }
+  ],
+  "missing": [],
+  "expectedReview": [],
+  "expectedValidation": "valid",
+  "coordinateUnits": "source_pixels",
+  "doorWidthUnit": "px",
+  "roomDimensionUnit": "m",
+  "doorDirectionSupport": "not_supported_by_existing_schema",
+  "coordinateContract": "Original image pixels, origin top-left; identity alignment only. Known drawing rotation is retained, never fitted away."
+}

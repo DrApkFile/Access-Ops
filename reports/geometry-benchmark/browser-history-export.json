@@ -1,0 +1,44 @@
+{
+  "at": "2026-10-27T23:23:48.815Z",
+  "projectId": "01a17f95-3703-7000-885c-2d2e25b59271",
+  "classification": "LIVE_END_TO_END_WITH_EXPLICIT_OPERATOR_CORRECTIONS",
+  "results": [
+    {
+      "step": "Real extracted rooms/walls/doorways and missing-scale flag visible",
+      "status": "PASS"
+    },
+    {
+      "step": "Actual saved critique/provenance inspectable",
+      "status": "PASS"
+    },
+    {
+      "step": "Resume previously saved and live-audited corrections without repeating inference",
+      "status": "PASS"
+    },
+    {
+      "step": "Saved project appears in project history",
+      "status": "PASS"
+    },
+    {
+      "step": "Reopened saved corrected geometry from history",
+      "status": "PASS"
+    },
+    {
+      "step": "Existing tactile conversion uses corrected model version and validates",
+      "status": "PASS",
+      "floorModelVersion": 11,
+      "valid": true,
+      "violations": []
+    },
+    {
+      "step": "Actual browser STL download exists and is nonempty",
+      "status": "PASS",
+      "files": [
+        {
+          "filename": "02-connected-map.stl",
+          "bytes": 122584
+        }
+      ]
+    }
+  ]
+}

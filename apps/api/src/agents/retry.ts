@@ -1,0 +1,60 @@
+const TRANSIENT_PATTERNS = [
+  'high demand',
+  'overloaded',
+  'temporarily',
+  'resource_exhausted',
+  'unavailable',
+  '429',
+  '503',
+  // Free-tier RPM limits recover within a minute; daily caps still fail
+  // after the last attempt, which is the right outcome.
+  'quota',
+  'rate limit',
+  // Schema/JSON misses on the Interactions path are nondeterministic;
+  // a bounded re-ask usually lands.
+  'invalid json output',
+  'schema-invalid output',
+  'returned no output',
+  'unable to connect',
+  'typo in the url or port',
+]
+
+const FALLBACK_DELAYS_MS = [5000, 20000, 45000, 60000]
+const MAX_DELAY_MS = 90000
+
+// Rate-limit errors state their own recovery time ("Please retry in 55.1s");
+// honoring it beats guessing.
+function retryAfterMs(message: string): number | null {
+  const match = /retry in ([\d.]+)\s*s/i.exec(message)
+  if (!match) return null
+  return Math.min(MAX_DELAY_MS, Math.ceil(Number(match[1]) * 1000) + 2000)
+}
+
+export async function withModelRetry<T>(fn: () => Promise<T>): Promise<T> {
+  let lastError: unknown
+  for (let attempt = 0; attempt <= FALLBACK_DELAYS_MS.length; attempt++) {
+    try {
+      return await fn()
+    } catch (error) {
+      lastError = error
+      const message = error instanceof Error ? error.message : String(error)
+      const transient = isTransientModelError(message)
+      if (!transient || attempt === FALLBACK_DELAYS_MS.length) {
+        throw error
+      }
+      const delay = retryAfterMs(message) ?? FALLBACK_DELAYS_MS[attempt]!
+      // Retries are billable and previously invisible: a run could burn
+      // its whole budget looking merely "slow" in the log.
+      console.warn(
+        `[llm] transient model error (attempt ${attempt + 1}/${FALLBACK_DELAYS_MS.length + 1}, retrying in ${Math.round(delay / 1000)}s): ${message.slice(0, 160)}`,
+      )
+      await new Promise((resolve) => setTimeout(resolve, delay))
+    }
+  }
+  throw lastError
+}
+
+export function isTransientModelError(message: string): boolean {
+  const normalized = message.toLowerCase()
+  return TRANSIENT_PATTERNS.some((pattern) => normalized.includes(pattern))
+}

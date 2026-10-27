@@ -1,0 +1,429 @@
+{
+  "at": "2026-10-27T23:01:51.904Z",
+  "projectId": "01a17f95-3703-7000-885c-2d2e25b59271",
+  "fixture": "02-connected.png",
+  "truth": "tests/fixtures/geometry-benchmark/02-connected.truth.json",
+  "classification": "LIVE_END_TO_END_SOURCE_WITH_UNAPPLIED_OPERATOR_CORRECTIONS",
+  "rawVersion": 2,
+  "rawModelSha256": "fb12f4aac1df0fdd762bd51ebcf2762346ab1991bbe8131b924133663cb37cc4",
+  "sourcePlanSha256": "07ab0a03407359196acc5d086cb19797dc14831320e9e45981f39590b6345c3c",
+  "rawComparison": {
+    "status": "FAIL",
+    "failures": [
+      "Room dimensions/boundary outside tolerance: ROOM A",
+      "Room dimensions/boundary outside tolerance: ROOM B",
+      "Door position/width/host outside tolerance: entry",
+      "Door position/width/host outside tolerance: connection",
+      "Wall coverage/position outside tolerance"
+    ],
+    "tolerances": {
+      "positionMeters": 0.15,
+      "positionPixels": 12,
+      "dimensionPercent": 8,
+      "doorWidthMeters": 0.15,
+      "effectivePositionPixels": 12
+    },
+    "alignment": "IDENTITY source pixels; known fixture rotation used only to measure dimensions; no fitted translation, rotation or scale",
+    "physicalMetricBasis": "Geometry errors are normalized using ground-truth scale solely for scoring, never supplied to extraction. Model physical scale and annotation readings are reported separately.",
+    "rooms": [
+      {
+        "id": "room-a",
+        "actualId": "r-1",
+        "expectedDimensions": {
+          "width": 3,
+          "height": 3
+        },
+        "annotatedDimensions": [
+          {
+            "axis": "width",
+            "expectedMeters": 3,
+            "actualProposalMeters": 3,
+            "origin": "extracted",
+            "absoluteErrorMeters": 0
+          },
+          {
+            "axis": "height",
+            "expectedMeters": 3,
+            "actualProposalMeters": 3,
+            "origin": "extracted",
+            "absoluteErrorMeters": 0
+          }
+        ],
+        "actualDimensions": {
+          "width": 4.1,
+          "height": 3
+        },
+        "absoluteError": {
+          "width": 1.0999999999999996,
+          "height": 0,
+          "unit": "reference m"
+        },
+        "percentageError": {
+          "width": 36.66666666666666,
+          "height": 0
+        },
+        "boundary": {
+          "meanPx": 33.02576032971212,
+          "p95Px": 84,
+          "maxPx": 93.03762679690406,
+          "p95ReferenceMeters": 1.05
+        },
+        "status": "FAIL"
+      },
+      {
+        "id": "room-b",
+        "actualId": "r-2",
+        "expectedDimensions": {
+          "width": 3,
+          "height": 3
+        },
+        "annotatedDimensions": [
+          {
+            "axis": "width",
+            "expectedMeters": 3,
+            "actualProposalMeters": 3,
+            "origin": "extracted",
+            "absoluteErrorMeters": 0
+          },
+          {
+            "axis": "height",
+            "expectedMeters": 3,
+            "actualProposalMeters": 3,
+            "origin": "extracted",
+            "absoluteErrorMeters": 0
+          }
+        ],
+        "actualDimensions": {
+          "width": 3,
+          "height": 3
+        },
+        "absoluteError": {
+          "width": 0,
+          "height": 0,
+          "unit": "reference m"
+        },
+        "percentageError": {
+          "width": 0,
+          "height": 0
+        },
+        "boundary": {
+          "meanPx": 15.114824060261133,
+          "p95Px": 84,
+          "maxPx": 84,
+          "p95ReferenceMeters": 1.05
+        },
+        "status": "FAIL"
+      }
+    ],
+    "doors": [
+      {
+        "id": "entry",
+        "actualId": "d-1",
+        "expected": {
+          "id": "entry",
+          "at": {
+            "x": 220,
+            "y": 340
+          },
+          "width": 80,
+          "wallId": "wall-2",
+          "direction": null,
+          "ambiguous": false
+        },
+        "actual": {
+          "at": {
+            "x": 184,
+            "y": 340
+          },
+          "width": 100,
+          "wallId": "w-3"
+        },
+        "positionErrorPx": 36,
+        "positionErrorReferenceMeters": 0.45,
+        "widthErrorPx": 20,
+        "widthErrorReferenceMeters": 0.25,
+        "hostWallErrorPx": 4,
+        "openingDirection": "NOT_SUPPORTED_BY_EXISTING_SCHEMA",
+        "status": "FAIL"
+      },
+      {
+        "id": "connection",
+        "actualId": "d-2",
+        "expected": {
+          "id": "connection",
+          "at": {
+            "x": 340,
+            "y": 220
+          },
+          "width": 80,
+          "wallId": "partition",
+          "direction": null,
+          "ambiguous": false
+        },
+        "actual": {
+          "at": {
+            "x": 424,
+            "y": 260
+          },
+          "width": 100,
+          "wallId": null
+        },
+        "positionErrorPx": 93.03762679690406,
+        "positionErrorReferenceMeters": 1.1629703349613008,
+        "widthErrorPx": 20,
+        "widthErrorReferenceMeters": 0.25,
+        "hostWallErrorPx": null,
+        "openingDirection": "NOT_SUPPORTED_BY_EXISTING_SCHEMA",
+        "status": "FAIL"
+      }
+    ],
+    "walls": {
+      "meanPx": 5.877934272300469,
+      "p95Px": 29,
+      "maxPx": 80,
+      "p95ReferenceMeters": 0.3625,
+      "missing": 0,
+      "extra": 1,
+      "rawExpectedSegments": 5,
+      "rawActualSegments": 8,
+      "segmentationNote": "Coverage matching tolerates split/coalesced collinear segments; raw segment counts are not semantic wall counts."
+    },
+    "missingRooms": 0,
+    "extraRooms": 0,
+    "missingDoors": 0,
+    "extraDoors": 0,
+    "physicalScale": {
+      "expected": 80,
+      "actual": null,
+      "annotationProposal": 80
+    },
+    "uncertainty": [],
+    "reviewIssues": [
+      {
+        "targetId": "plan",
+        "reason": "scale_unknown",
+        "message": "Physical scale is not confirmed. Calibrate from a known measurement or explicitly choose provisional relative-scale output."
+      },
+      {
+        "targetId": "d-2",
+        "reason": "door_ambiguous",
+        "message": "Door position, width or host wall needs source review."
+      },
+      {
+        "targetId": "r-1",
+        "reason": "annotation_unreviewed",
+        "message": "room_width: confirm the model-read annotation against the source before using it."
+      },
+      {
+        "targetId": "r-1",
+        "reason": "annotation_unreviewed",
+        "message": "room_height: confirm the model-read annotation against the source before using it."
+      },
+      {
+        "targetId": "r-2",
+        "reason": "annotation_unreviewed",
+        "message": "room_width: confirm the model-read annotation against the source before using it."
+      },
+      {
+        "targetId": "r-2",
+        "reason": "annotation_unreviewed",
+        "message": "room_height: confirm the model-read annotation against the source before using it."
+      }
+    ],
+    "geometryExport": {
+      "allowed": false,
+      "provisional": false,
+      "issues": [
+        {
+          "targetId": "plan",
+          "reason": "scale_unknown",
+          "message": "Physical scale is not confirmed. Calibrate from a known measurement or explicitly choose provisional relative-scale output."
+        },
+        {
+          "targetId": "d-2",
+          "reason": "door_ambiguous",
+          "message": "Door position, width or host wall needs source review."
+        },
+        {
+          "targetId": "r-1",
+          "reason": "annotation_unreviewed",
+          "message": "room_width: confirm the model-read annotation against the source before using it."
+        },
+        {
+          "targetId": "r-1",
+          "reason": "annotation_unreviewed",
+          "message": "room_height: confirm the model-read annotation against the source before using it."
+        },
+        {
+          "targetId": "r-2",
+          "reason": "annotation_unreviewed",
+          "message": "room_width: confirm the model-read annotation against the source before using it."
+        },
+        {
+          "targetId": "r-2",
+          "reason": "annotation_unreviewed",
+          "message": "room_height: confirm the model-read annotation against the source before using it."
+        }
+      ]
+    },
+    "annotationReadings": [
+      {
+        "origin": "extracted",
+        "state": "needs_review",
+        "reasons": [
+          "scale_unreviewed"
+        ],
+        "note": "Model read/derived: REFERENCE: 80 pixels = 1 m; confirm calibration before using physical dimensions.",
+        "id": "plan-scale",
+        "targetId": null,
+        "kind": "scale",
+        "value": 80,
+        "unit": "px/m"
+      },
+      {
+        "origin": "extracted",
+        "state": "needs_review",
+        "reasons": [],
+        "note": "Unverified model annotation: 3.00 m + 3.00 m",
+        "id": "r-1-room_width",
+        "targetId": "r-1",
+        "kind": "room_width",
+        "value": 3,
+        "unit": "m"
+      },
+      {
+        "origin": "extracted",
+        "state": "needs_review",
+        "reasons": [],
+        "note": "Unverified model annotation: 3.00 m",
+        "id": "r-1-room_height",
+        "targetId": "r-1",
+        "kind": "room_height",
+        "value": 3,
+        "unit": "m"
+      },
+      {
+        "origin": "extracted",
+        "state": "needs_review",
+        "reasons": [],
+        "note": "Unverified model annotation: 3.00 m + 3.00 m",
+        "id": "r-2-room_width",
+        "targetId": "r-2",
+        "kind": "room_width",
+        "value": 3,
+        "unit": "m"
+      },
+      {
+        "origin": "extracted",
+        "state": "needs_review",
+        "reasons": [],
+        "note": "Unverified model annotation: 3.00 m",
+        "id": "r-2-room_height",
+        "targetId": "r-2",
+        "kind": "room_height",
+        "value": 3,
+        "unit": "m"
+      }
+    ],
+    "manualCorrectionRequired": true,
+    "elementCount": 12
+  },
+  "inference": [
+    {
+      "provider": "openrouter",
+      "requestedModel": "nvidia/nemotron-3.5-super-vl:free",
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "servingProvider": "Nvidia",
+      "requestId": "gen-1793141913-krBmT4APGDnQBYaaOsCz",
+      "capability": "vision",
+      "execution": "live",
+      "durationMs": 69034,
+      "completedAt": "2026-10-27T22:58:39.539Z",
+      "httpStatus": 200,
+      "reportedCost": 0,
+      "inputImages": [
+        {
+          "sourceSha256": "07ab0a03407359196acc5d086cb19797dc14831320e9e45981f39590b6345c3c",
+          "sentSha256": "42e923337b4b758b29953d2601e16b91987c317247b1671e469dd0319b80e72f",
+          "width": 680,
+          "height": 540,
+          "sourceMime": "image/png"
+        }
+      ],
+      "responseTextSha256": "605b4ec8c42cb11d9e40a62d992e3355b3305545a88a53bd25779ddae9996e12",
+      "geometryReviewed": false
+    },
+    {
+      "provider": "openrouter",
+      "requestedModel": "nvidia/nemotron-3.5-super-vl:free",
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "servingProvider": "Nvidia",
+      "requestId": "gen-1793141921-4BXH5lHy0R9uxJs9GCRW",
+      "capability": "vision",
+      "execution": "live",
+      "durationMs": 26276,
+      "completedAt": "2026-10-27T22:59:06.091Z",
+      "httpStatus": 200,
+      "reportedCost": 0,
+      "inputImages": [
+        {
+          "sourceSha256": "07ab0a03407359196acc5d086cb19797dc14831320e9e45981f39590b6345c3c",
+          "sentSha256": "42e923337b4b758b29953d2601e16b91987c317247b1671e469dd0319b80e72f",
+          "width": 680,
+          "height": 540,
+          "sourceMime": "image/png"
+        },
+        {
+          "sourceSha256": "d26b5fe3279dc508a7d64721b790b1e553b408bf89cd558c3c254025a40ecbb1",
+          "sentSha256": "5ba93a98279e0bd040b851baa88eea810d7efde35a930e686533dd30cdb9d3a9",
+          "width": 680,
+          "height": 540,
+          "sourceMime": "image/png"
+        },
+        {
+          "sourceSha256": "f15701d3c37e856ef82628a738f573d9887a0f45e6f9bf9f9fef79409543160d",
+          "sentSha256": "5a48102ad866cf8238a5193230d9c00626972019ceb22205b953fe000d8843ca",
+          "width": 680,
+          "height": 540,
+          "sourceMime": "image/png"
+        }
+      ],
+      "responseTextSha256": "d8441110586ee89cdd976df4a54a2cbab967700b3f12ba9ab358d18627d20592",
+      "geometryReviewed": false
+    },
+    {
+      "provider": "openrouter",
+      "requestedModel": "nvidia/nemotron-3.5-super-vl:free",
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "servingProvider": "Nvidia",
+      "requestId": "gen-1793141947-n4b7ErLaQpM9rggAFVBs",
+      "capability": "vision",
+      "execution": "live",
+      "durationMs": 2700,
+      "completedAt": "2026-10-27T22:59:08.944Z",
+      "httpStatus": 200,
+      "reportedCost": 0,
+      "inputImages": [
+        {
+          "sourceSha256": "07ab0a03407359196acc5d086cb19797dc14831320e9e45981f39590b6345c3c",
+          "sentSha256": "42e923337b4b758b29953d2601e16b91987c317247b1671e469dd0319b80e72f",
+          "width": 680,
+          "height": 540,
+          "sourceMime": "image/png"
+        },
+        {
+          "sourceSha256": "9b90def680d5c4598b363065e6c395ab8eabadee0f414e58ab228b695d22154e",
+          "sentSha256": "9b90def680d5c4598b363065e6c395ab8eabadee0f414e58ab228b695d22154e",
+          "width": 900,
+          "height": 660,
+          "sourceMime": "image/png"
+        }
+      ],
+      "responseTextSha256": "dc4e7c5a7275ef9147d4d31845690719c57fec5c325829cd4c02b68109c5a7c6",
+      "geometryReviewed": false
+    }
+  ],
+  "operatorCorrectionsGenerated": true,
+  "operatorCorrectionsApplied": false,
+  "note": "Ground truth is the explicit human/operator reference. These operations are NOT a model response and are excluded from benchmark accuracy."
+}

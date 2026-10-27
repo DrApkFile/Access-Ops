@@ -1,0 +1,1 @@
+ALTER TABLE "ao_resolutions" ADD COLUMN "decision" jsonb DEFAULT '{}'::jsonb NOT NULL;

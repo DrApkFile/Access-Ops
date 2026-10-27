@@ -1,0 +1,33 @@
+{
+  "name": "api",
+  "private": true,
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "bun build src/index.ts --outdir dist --target bun",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "bun run src/db/migrate.ts",
+    "db:studio": "drizzle-kit studio",
+    "typecheck": "tsc --noEmit",
+    "start": "bun src/index.ts",
+    "worker": "bun src/worker.ts",
+    "bootstrap": "bun scripts/bootstrap.ts"
+  },
+  "dependencies": {
+    "@bumps/floor-model": "workspace:*",
+    "@google/adk": "2.3.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "drizzle-orm": "^0.45.2",
+    "hono": "4.13.14",
+    "image-size": "2.0.4",
+    "manifold-3d": "^3.5.1",
+    "mupdf": "^1.28.0",
+    "zod": "4.6.7",
+    "@accessops/domain": "workspace:*",
+    "sharp": "0.35.5"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.0",
+    "drizzle-kit": "^0.31.10",
+    "typescript": "^5"
+  }
+}

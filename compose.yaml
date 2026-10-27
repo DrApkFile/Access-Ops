@@ -1,0 +1,55 @@
+# Local/container rehearsal. Production uses TLS Postgres and HTTPS ingress as in docs/deployment.md.
+services:
+  database:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: accessops
+      POSTGRES_DB: accessops
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set a unique database password in the local environment}
+    volumes: [database:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U accessops -d accessops"]
+      interval: 5s
+      retries: 20
+  migrate:
+    build: {context: ., dockerfile: apps/api/Dockerfile}
+    env_file: ${ACCESSOPS_CONTAINER_ENV_FILE:-.env.container}
+    command: [bun, src/db/migrate.ts]
+    depends_on: {database: {condition: service_healthy}}
+    restart: "no"
+  api:
+    build: {context: ., dockerfile: apps/api/Dockerfile}
+    env_file: ${ACCESSOPS_CONTAINER_ENV_FILE:-.env.container}
+    environment:
+      NODE_ENV: development
+      PORT: 3003
+      UPLOADS_DIR: /var/lib/accessops/uploads
+    volumes: [uploads:/var/lib/accessops/uploads]
+    ports: [127.0.0.1:3403:3003]
+    depends_on: {migrate: {condition: service_completed_successfully}}
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, bun, -e, "process.exit((await fetch('http://localhost:3003/ready')).ok?0:1)"]
+      interval: 20s
+      retries: 3
+  worker:
+    build: {context: ., dockerfile: apps/api/Dockerfile}
+    env_file: ${ACCESSOPS_CONTAINER_ENV_FILE:-.env.container}
+    command: [bun, src/worker.ts]
+    environment:
+      NODE_ENV: development
+      UPLOADS_DIR: /var/lib/accessops/uploads
+    volumes: [uploads:/var/lib/accessops/uploads]
+    depends_on: {migrate: {condition: service_completed_successfully}}
+    restart: unless-stopped
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    environment: {API_INTERNAL_URL: "http://api:3003"}
+    ports: [127.0.0.1:3400:3000]
+    depends_on: [api]
+    restart: unless-stopped
+volumes:
+  database: {}
+  uploads: {}

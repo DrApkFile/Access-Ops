@@ -1,0 +1,53 @@
+{
+  "at": "2026-10-27T23:21:16.779Z",
+  "projectId": "01a17f95-3703-7000-885c-2d2e25b59271",
+  "classification": "LIVE_END_TO_END_WITH_EXPLICIT_OPERATOR_CORRECTIONS",
+  "results": [
+    {
+      "step": "Real extracted rooms/walls/doorways and missing-scale flag visible",
+      "status": "PASS"
+    },
+    {
+      "step": "Actual saved critique/provenance inspectable",
+      "status": "PASS"
+    },
+    {
+      "step": "Explicit operator geometry corrections saved through existing UI operations",
+      "status": "PASS"
+    },
+    {
+      "step": "Scale correction saved with user-corrected provenance",
+      "status": "PASS"
+    },
+    {
+      "step": "Explicit dimensions reviewed against printed 3 m annotations",
+      "status": "PASS",
+      "count": 4
+    },
+    {
+      "step": "Specific corrected feature provenance visible",
+      "status": "PASS"
+    },
+    {
+      "step": "Run critique on saved geometry",
+      "status": "PASS"
+    },
+    {
+      "step": "Run doorway audit on saved geometry",
+      "status": "PASS"
+    },
+    {
+      "step": "Read-only audits preserved the corrected geometry",
+      "status": "PASS"
+    },
+    {
+      "step": "Saved project appears in project history",
+      "status": "FAIL"
+    },
+    {
+      "step": "Browser correction/export workflow",
+      "status": "FAIL",
+      "error": "Error: Check failed: Saved project appears in project history"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-27T23:03:12.099Z",
+  "classification": "LIVE_END_TO_END_BROWSER",
+  "projectId": "01a17f95-3703-7000-885c-2d2e25b59271",
+  "results": [
+    {
+      "step": "Open existing app",
+      "status": "PASS"
+    },
+    {
+      "step": "Resume the same ordinary-upload project after browser interruption",
+      "status": "PASS",
+      "fixture": "02-connected.png",
+      "projectId": "01a17f95-3703-7000-885c-2d2e25b59271"
+    },
+    {
+      "step": "Real configured extraction/critique pipeline",
+      "status": "PASS",
+      "projectId": "01a17f95-3703-7000-885c-2d2e25b59271",
+      "projectStatus": "parsed",
+      "parseError": null,
+      "durationMs": 153,
+      "states": [
+        {
+          "at": "2026-10-27T23:03:12.099Z",
+          "status": "parsed",
+          "progress": null
+        }
+      ]
+    }
+  ]
+}

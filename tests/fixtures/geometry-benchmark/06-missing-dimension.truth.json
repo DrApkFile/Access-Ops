@@ -1,0 +1,115 @@
+{
+  "id": "06-missing-dimension",
+  "image": "06-missing-dimension.png",
+  "synthetic": true,
+  "widthPx": 680,
+  "heightPx": 540,
+  "units": "m",
+  "pixelsPerMeter": 80,
+  "rotationDegrees": 0,
+  "rooms": [
+    {
+      "id": "room-a",
+      "label": "ROOM A",
+      "polygon": [
+        {
+          "x": 100,
+          "y": 100
+        },
+        {
+          "x": 500,
+          "y": 100
+        },
+        {
+          "x": 500,
+          "y": 340
+        },
+        {
+          "x": 100,
+          "y": 340
+        }
+      ],
+      "dimensions": {
+        "width": 5,
+        "height": 3
+      }
+    }
+  ],
+  "walls": [
+    {
+      "id": "wall-0",
+      "a": {
+        "x": 100,
+        "y": 100
+      },
+      "b": {
+        "x": 500,
+        "y": 100
+      }
+    },
+    {
+      "id": "wall-1",
+      "a": {
+        "x": 500,
+        "y": 100
+      },
+      "b": {
+        "x": 500,
+        "y": 340
+      }
+    },
+    {
+      "id": "wall-2",
+      "a": {
+        "x": 500,
+        "y": 340
+      },
+      "b": {
+        "x": 100,
+        "y": 340
+      }
+    },
+    {
+      "id": "wall-3",
+      "a": {
+        "x": 100,
+        "y": 340
+      },
+      "b": {
+        "x": 100,
+        "y": 100
+      }
+    }
+  ],
+  "doors": [
+    {
+      "id": "entry",
+      "at": {
+        "x": 300,
+        "y": 340
+      },
+      "width": 80,
+      "wallId": "wall-2",
+      "direction": null,
+      "ambiguous": false
+    }
+  ],
+  "annotations": [
+    {
+      "roomId": "room-a",
+      "axis": "width",
+      "value": 5,
+      "unit": "m"
+    }
+  ],
+  "missing": [
+    "room-a.height_annotation"
+  ],
+  "expectedReview": [],
+  "expectedValidation": "valid",
+  "coordinateUnits": "source_pixels",
+  "doorWidthUnit": "px",
+  "roomDimensionUnit": "m",
+  "doorDirectionSupport": "not_supported_by_existing_schema",
+  "coordinateContract": "Original image pixels, origin top-left; identity alignment only. Known drawing rotation is retained, never fitted away."
+}

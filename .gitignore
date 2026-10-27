@@ -1,0 +1,11 @@
+node_modules
+.DS_Store
+dist
+.serena
+pipeline_tests/corpus-cache/
+
+.accessops-local/
+.env
+.env.local
+.env.container
+*.aobackup

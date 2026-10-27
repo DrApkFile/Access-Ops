@@ -1,0 +1,319 @@
+{
+  "at": "2026-10-27T23:30:04.738Z",
+  "classification": "LIVE_END_TO_END_WITH_EXPLICIT_OPERATOR_CORRECTIONS",
+  "status": "PASS",
+  "projectId": "01a17f95-3703-7000-885c-2d2e25b59271",
+  "version": 11,
+  "checks": {
+    "knownReferenceGeometry": true,
+    "confirmedScale": true,
+    "reviewGate": true,
+    "rawHistoryPreserved": true,
+    "userCorrectionProvenance": true,
+    "readOnlyAuditUsesCorrectedModel": true,
+    "correctedCritiqueInput": true,
+    "realCritiqueReceipt": true,
+    "realAuditReceipt": true
+  },
+  "comparison": {
+    "status": "PASS",
+    "failures": [],
+    "tolerances": {
+      "positionMeters": 0.15,
+      "positionPixels": 12,
+      "dimensionPercent": 8,
+      "doorWidthMeters": 0.15,
+      "effectivePositionPixels": 12
+    },
+    "alignment": "IDENTITY source pixels; known fixture rotation used only to measure dimensions; no fitted translation, rotation or scale",
+    "physicalMetricBasis": "Geometry errors are normalized using ground-truth scale solely for scoring, never supplied to extraction. Model physical scale and annotation readings are reported separately.",
+    "rooms": [
+      {
+        "id": "room-a",
+        "actualId": "r-1",
+        "expectedDimensions": {
+          "width": 3,
+          "height": 3
+        },
+        "annotatedDimensions": [
+          {
+            "axis": "width",
+            "expectedMeters": 3,
+            "actualProposalMeters": 3,
+            "origin": "extracted",
+            "absoluteErrorMeters": 0
+          },
+          {
+            "axis": "height",
+            "expectedMeters": 3,
+            "actualProposalMeters": 3,
+            "origin": "extracted",
+            "absoluteErrorMeters": 0
+          }
+        ],
+        "actualDimensions": {
+          "width": 3,
+          "height": 3
+        },
+        "absoluteError": {
+          "width": 0,
+          "height": 0,
+          "unit": "reference m"
+        },
+        "percentageError": {
+          "width": 0,
+          "height": 0
+        },
+        "boundary": {
+          "meanPx": 0,
+          "p95Px": 0,
+          "maxPx": 0,
+          "p95ReferenceMeters": 0
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "room-b",
+        "actualId": "r-2",
+        "expectedDimensions": {
+          "width": 3,
+          "height": 3
+        },
+        "annotatedDimensions": [
+          {
+            "axis": "width",
+            "expectedMeters": 3,
+            "actualProposalMeters": 3,
+            "origin": "extracted",
+            "absoluteErrorMeters": 0
+          },
+          {
+            "axis": "height",
+            "expectedMeters": 3,
+            "actualProposalMeters": 3,
+            "origin": "extracted",
+            "absoluteErrorMeters": 0
+          }
+        ],
+        "actualDimensions": {
+          "width": 3,
+          "height": 3
+        },
+        "absoluteError": {
+          "width": 0,
+          "height": 0,
+          "unit": "reference m"
+        },
+        "percentageError": {
+          "width": 0,
+          "height": 0
+        },
+        "boundary": {
+          "meanPx": 0,
+          "p95Px": 0,
+          "maxPx": 0,
+          "p95ReferenceMeters": 0
+        },
+        "status": "PASS"
+      }
+    ],
+    "doors": [
+      {
+        "id": "entry",
+        "actualId": "review-entry",
+        "expected": {
+          "id": "entry",
+          "at": {
+            "x": 220,
+            "y": 340
+          },
+          "width": 80,
+          "wallId": "wall-2",
+          "direction": null,
+          "ambiguous": false
+        },
+        "actual": {
+          "at": {
+            "x": 220,
+            "y": 340
+          },
+          "width": 80,
+          "wallId": "review-wall-2"
+        },
+        "positionErrorPx": 0,
+        "positionErrorReferenceMeters": 0,
+        "widthErrorPx": 0,
+        "widthErrorReferenceMeters": 0,
+        "hostWallErrorPx": 0,
+        "openingDirection": "NOT_SUPPORTED_BY_EXISTING_SCHEMA",
+        "status": "PASS"
+      },
+      {
+        "id": "connection",
+        "actualId": "review-connection",
+        "expected": {
+          "id": "connection",
+          "at": {
+            "x": 340,
+            "y": 220
+          },
+          "width": 80,
+          "wallId": "partition",
+          "direction": null,
+          "ambiguous": false
+        },
+        "actual": {
+          "at": {
+            "x": 340,
+            "y": 220
+          },
+          "width": 80,
+          "wallId": "review-partition"
+        },
+        "positionErrorPx": 0,
+        "positionErrorReferenceMeters": 0,
+        "widthErrorPx": 0,
+        "widthErrorReferenceMeters": 0,
+        "hostWallErrorPx": 0,
+        "openingDirection": "NOT_SUPPORTED_BY_EXISTING_SCHEMA",
+        "status": "PASS"
+      }
+    ],
+    "walls": {
+      "meanPx": 0,
+      "p95Px": 0,
+      "maxPx": 0,
+      "p95ReferenceMeters": 0,
+      "missing": 0,
+      "extra": 0,
+      "rawExpectedSegments": 5,
+      "rawActualSegments": 5,
+      "segmentationNote": "Coverage matching tolerates split/coalesced collinear segments; raw segment counts are not semantic wall counts."
+    },
+    "missingRooms": 0,
+    "extraRooms": 0,
+    "missingDoors": 0,
+    "extraDoors": 0,
+    "physicalScale": {
+      "expected": 80,
+      "actual": 80,
+      "annotationProposal": 80
+    },
+    "uncertainty": [],
+    "reviewIssues": [],
+    "geometryExport": {
+      "allowed": true,
+      "provisional": false,
+      "issues": []
+    },
+    "annotationReadings": [
+      {
+        "origin": "user_corrected",
+        "state": "reviewed",
+        "reasons": [],
+        "note": "Operator checked the known synthetic ground truth; these saved edits are user corrections, not model extraction.",
+        "originalValue": "{\"value\":80,\"pixelsPerMeter\":null}",
+        "id": "plan-scale",
+        "targetId": null,
+        "kind": "scale",
+        "value": 80,
+        "unit": "px/m"
+      },
+      {
+        "origin": "extracted",
+        "state": "reviewed",
+        "reasons": [],
+        "note": "Operator checked the known synthetic ground truth; these saved edits are user corrections, not model extraction.",
+        "id": "r-1-room_width",
+        "targetId": "r-1",
+        "kind": "room_width",
+        "value": 3,
+        "unit": "m"
+      },
+      {
+        "origin": "extracted",
+        "state": "reviewed",
+        "reasons": [],
+        "note": "Operator checked the known synthetic ground truth; these saved edits are user corrections, not model extraction.",
+        "id": "r-1-room_height",
+        "targetId": "r-1",
+        "kind": "room_height",
+        "value": 3,
+        "unit": "m"
+      },
+      {
+        "origin": "extracted",
+        "state": "reviewed",
+        "reasons": [],
+        "note": "Operator checked the known synthetic ground truth; these saved edits are user corrections, not model extraction.",
+        "id": "r-2-room_width",
+        "targetId": "r-2",
+        "kind": "room_width",
+        "value": 3,
+        "unit": "m"
+      },
+      {
+        "origin": "extracted",
+        "state": "reviewed",
+        "reasons": [],
+        "note": "Operator checked the known synthetic ground truth; these saved edits are user corrections, not model extraction.",
+        "id": "r-2-room_height",
+        "targetId": "r-2",
+        "kind": "room_height",
+        "value": 3,
+        "unit": "m"
+      }
+    ],
+    "manualCorrectionRequired": false,
+    "elementCount": 9
+  },
+  "files": [
+    {
+      "kind": "map",
+      "status": "PASS",
+      "modelVersion": "11",
+      "geometryStatus": "current",
+      "bytes": 122584,
+      "triangles": 2450,
+      "bbox": {
+        "min": [
+          0,
+          0,
+          0
+        ],
+        "max": [
+          200,
+          200,
+          4
+        ]
+      },
+      "watertight": true,
+      "nonManifoldEdges": 0,
+      "volumeMm3": 121140.41358474178
+    },
+    {
+      "kind": "legend",
+      "status": "PASS",
+      "modelVersion": "11",
+      "geometryStatus": "current",
+      "bytes": 420684,
+      "triangles": 8412,
+      "bbox": {
+        "min": [
+          0,
+          0,
+          0
+        ],
+        "max": [
+          200,
+          200,
+          3.700000047683716
+        ]
+      },
+      "watertight": true,
+      "nonManifoldEdges": 0,
+      "volumeMm3": 120030.59481212882
+    }
+  ],
+  "note": "This demonstrates correction and export, not uncorrected live-model accuracy. No recording was created."
+}

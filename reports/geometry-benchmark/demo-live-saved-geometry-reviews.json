@@ -1,0 +1,243 @@
+[
+  {
+    "version": 11,
+    "kind": "currentGeometryCritique",
+    "review": {
+      "sourceModelVersion": 9,
+      "sourceModelSha256": "920b3ee7d502d311edd078a3276c64506a49258ac0e2632ff7d58778f10e5f73",
+      "result": {
+        "confidenceAdjustments": [
+          {
+            "confidence": 1,
+            "elementId": "review-wall-0"
+          },
+          {
+            "confidence": 1,
+            "elementId": "review-wall-1"
+          },
+          {
+            "confidence": 1,
+            "elementId": "review-wall-2"
+          },
+          {
+            "confidence": 1,
+            "elementId": "review-wall-3"
+          },
+          {
+            "confidence": 1,
+            "elementId": "review-partition"
+          },
+          {
+            "confidence": 0.4,
+            "elementId": "review-entry"
+          },
+          {
+            "confidence": 0.9,
+            "elementId": "review-connection"
+          },
+          {
+            "confidence": 0.3,
+            "elementId": "r-1"
+          },
+          {
+            "confidence": 0.3,
+            "elementId": "r-2"
+          }
+        ],
+        "findings": [],
+        "verdict": "needs_refinement"
+      },
+      "executions": [
+        {
+          "provider": "openrouter",
+          "requestedModel": "nvidia/nemotron-3.5-super-vl:free",
+          "model": "nvidia/nemotron-3.5-super-vl:free",
+          "servingProvider": "Nvidia",
+          "requestId": "gen-1793143258-wlsA2vnl5iCMF6EOTkul",
+          "capability": "vision",
+          "execution": "live",
+          "durationMs": 12734,
+          "completedAt": "2026-10-27T23:21:04.145Z",
+          "httpStatus": 200,
+          "reportedCost": 0,
+          "inputImages": [
+            {
+              "sourceSha256": "07ab0a03407359196acc5d086cb19797dc14831320e9e45981f39590b6345c3c",
+              "sentSha256": "42e923337b4b758b29953d2601e16b91987c317247b1671e469dd0319b80e72f",
+              "width": 680,
+              "height": 540,
+              "sourceMime": "image/png"
+            },
+            {
+              "sourceSha256": "be4daaf5821a67f40795904fdaa905c1cfd261a78425fb6b6326d7386d6d4dd9",
+              "sentSha256": "1fb13382232a4861f855a7214150c9fad53691693c237a7f04ccb09201db98ea",
+              "width": 680,
+              "height": 540,
+              "sourceMime": "image/png"
+            },
+            {
+              "sourceSha256": "cfcb880c82b3fdb45e237fd0bff24077686a0ae353da8ef755a2e6b99cfb0922",
+              "sentSha256": "f9411ba646e94a5bfc289b04b68c5aeeac6fd3629f5d19d0b24426e31b561d82",
+              "width": 680,
+              "height": 540,
+              "sourceMime": "image/png"
+            }
+          ],
+          "responseTextSha256": "357aaec8fcef1dffa48b29c81b4ce87f1332fd0f653fdc5a3d526a1393139485",
+          "geometryReviewed": false
+        }
+      ],
+      "applied": false,
+      "note": "Read-only model suggestions; user corrections are not overwritten."
+    }
+  },
+  {
+    "version": 11,
+    "kind": "doorwayAudit",
+    "review": {
+      "sourceModelVersion": 10,
+      "sourceModelSha256": "920b3ee7d502d311edd078a3276c64506a49258ac0e2632ff7d58778f10e5f73",
+      "ops": [
+        {
+          "op": "keep",
+          "id": "review-entry",
+          "confidence": 0.95,
+          "reason": "zoom shows a door gap with swing arc in the bottom wall of Room A at approximately x=220, width 80"
+        },
+        {
+          "op": "keep",
+          "id": "review-connection",
+          "confidence": 0.95,
+          "reason": "zoom shows a door gap with swing arc in the partition between Room A and Room B at approximately x=340, width 80"
+        }
+      ],
+      "executions": [
+        {
+          "provider": "openrouter",
+          "requestedModel": "nvidia/nemotron-3.5-super-vl:free",
+          "model": "nvidia/nemotron-3.5-super-vl:free",
+          "servingProvider": "Nvidia",
+          "requestId": "gen-1793143270-yhNrZZOyszho44Os5VQh",
+          "capability": "vision",
+          "execution": "live",
+          "durationMs": 3121,
+          "completedAt": "2026-10-27T23:21:11.975Z",
+          "httpStatus": 200,
+          "reportedCost": 0,
+          "inputImages": [
+            {
+              "sourceSha256": "07ab0a03407359196acc5d086cb19797dc14831320e9e45981f39590b6345c3c",
+              "sentSha256": "42e923337b4b758b29953d2601e16b91987c317247b1671e469dd0319b80e72f",
+              "width": 680,
+              "height": 540,
+              "sourceMime": "image/png"
+            },
+            {
+              "sourceSha256": "3b40b87741c92ffee77b50c0358aaf93c6137028fcccf46625a3eb2d9af4b200",
+              "sentSha256": "3b40b87741c92ffee77b50c0358aaf93c6137028fcccf46625a3eb2d9af4b200",
+              "width": 900,
+              "height": 900,
+              "sourceMime": "image/png"
+            }
+          ],
+          "responseTextSha256": "d0f1fa878f4ef41236ae1644f48281162f4c8891d7cd075f9d905e759be0e007",
+          "geometryReviewed": false
+        }
+      ],
+      "applied": false,
+      "note": "Read-only model suggestions; user corrections are not overwritten."
+    }
+  },
+  {
+    "version": 10,
+    "kind": "currentGeometryCritique",
+    "review": {
+      "sourceModelVersion": 9,
+      "sourceModelSha256": "920b3ee7d502d311edd078a3276c64506a49258ac0e2632ff7d58778f10e5f73",
+      "result": {
+        "confidenceAdjustments": [
+          {
+            "confidence": 1,
+            "elementId": "review-wall-0"
+          },
+          {
+            "confidence": 1,
+            "elementId": "review-wall-1"
+          },
+          {
+            "confidence": 1,
+            "elementId": "review-wall-2"
+          },
+          {
+            "confidence": 1,
+            "elementId": "review-wall-3"
+          },
+          {
+            "confidence": 1,
+            "elementId": "review-partition"
+          },
+          {
+            "confidence": 0.4,
+            "elementId": "review-entry"
+          },
+          {
+            "confidence": 0.9,
+            "elementId": "review-connection"
+          },
+          {
+            "confidence": 0.3,
+            "elementId": "r-1"
+          },
+          {
+            "confidence": 0.3,
+            "elementId": "r-2"
+          }
+        ],
+        "findings": [],
+        "verdict": "needs_refinement"
+      },
+      "executions": [
+        {
+          "provider": "openrouter",
+          "requestedModel": "nvidia/nemotron-3.5-super-vl:free",
+          "model": "nvidia/nemotron-3.5-super-vl:free",
+          "servingProvider": "Nvidia",
+          "requestId": "gen-1793143258-wlsA2vnl5iCMF6EOTkul",
+          "capability": "vision",
+          "execution": "live",
+          "durationMs": 12734,
+          "completedAt": "2026-10-27T23:21:04.145Z",
+          "httpStatus": 200,
+          "reportedCost": 0,
+          "inputImages": [
+            {
+              "sourceSha256": "07ab0a03407359196acc5d086cb19797dc14831320e9e45981f39590b6345c3c",
+              "sentSha256": "42e923337b4b758b29953d2601e16b91987c317247b1671e469dd0319b80e72f",
+              "width": 680,
+              "height": 540,
+              "sourceMime": "image/png"
+            },
+            {
+              "sourceSha256": "be4daaf5821a67f40795904fdaa905c1cfd261a78425fb6b6326d7386d6d4dd9",
+              "sentSha256": "1fb13382232a4861f855a7214150c9fad53691693c237a7f04ccb09201db98ea",
+              "width": 680,
+              "height": 540,
+              "sourceMime": "image/png"
+            },
+            {
+              "sourceSha256": "cfcb880c82b3fdb45e237fd0bff24077686a0ae353da8ef755a2e6b99cfb0922",
+              "sentSha256": "f9411ba646e94a5bfc289b04b68c5aeeac6fd3629f5d19d0b24426e31b561d82",
+              "width": 680,
+              "height": 540,
+              "sourceMime": "image/png"
+            }
+          ],
+          "responseTextSha256": "357aaec8fcef1dffa48b29c81b4ce87f1332fd0f653fdc5a3d526a1393139485",
+          "geometryReviewed": false
+        }
+      ],
+      "applied": false,
+      "note": "Read-only model suggestions; user corrections are not overwritten."
+    }
+  }
+]
