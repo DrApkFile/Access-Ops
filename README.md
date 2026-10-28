@@ -242,7 +242,7 @@ scripts/             Setup, development, and security tooling
 
 ## Further reading
 
-- [Judge’s walkthrough](judgung.md)
+- [Judge’s walkthrough](judging.md)
 - [Architecture](docs/architecture.md) and [domain model](docs/accessops-domain-model.md)
 - [Source contracts](docs/data-sources.md) and [integration execution evidence](docs/live-integration-verification.md)
 - [Geometry walkthrough](docs/geometry-demo-runbook.md) and [STL verification](reports/geometry-benchmark/demo-verification.json)
