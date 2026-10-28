@@ -9,3 +9,5 @@ pipeline_tests/corpus-cache/
 .env.local
 .env.container
 *.aobackup
+
+/videos/
