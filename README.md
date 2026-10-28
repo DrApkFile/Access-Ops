@@ -248,7 +248,6 @@ scripts/             Setup, development, and security tooling
 - [Geometry walkthrough](docs/geometry-demo-runbook.md) and [STL verification](reports/geometry-benchmark/demo-verification.json)
 - [Security](docs/security.md), [deployment](docs/deployment.md), and [operations and recovery](docs/operations-and-recovery.md)
 - [Design system](docs/ui-design-system.md) and [development changelog](changelog.md)
-- [Original Bumps documentation](docs/bumps-original-readme.md)
 
 ## Attribution
 
