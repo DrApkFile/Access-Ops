@@ -1,0 +1,265 @@
+{
+  "full-tests-final": {
+    "at": "2026-10-27T23:28:05.529992+00:00",
+    "command": [
+      "bun",
+      "run",
+      "test"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 59.16
+  },
+  "full-tests-verified": {
+    "at": "2026-10-27T23:40:01.539442+00:00",
+    "command": [
+      "bun",
+      "run",
+      "test"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 39.01
+  },
+  "geometry-integration-final": {
+    "at": "2026-10-27T23:08:37.804783+00:00",
+    "command": [
+      "bun",
+      "--env-file=apps/api/.env",
+      "test",
+      "tests/integration/geometry-review.test.ts"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 3.7
+  },
+  "integration-delivery": {
+    "at": "2026-10-27T23:33:38.695560+00:00",
+    "command": [
+      "bun",
+      "run",
+      "test:integration"
+    ],
+    "exitCode": 1,
+    "durationSeconds": 157.32
+  },
+  "integration-verified": {
+    "at": "2026-10-27T23:39:10.877000+00:00",
+    "command": [
+      "bun",
+      "run",
+      "test:integration"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 42.21
+  },
+  "typecheck-delivery": {
+    "at": "2026-10-27T23:35:16.549164+00:00",
+    "command": [
+      "bun",
+      "run",
+      "typecheck"
+    ],
+    "exitCode": 2,
+    "durationSeconds": 313.38
+  },
+  "typecheck-corrected": {
+    "at": "2026-10-27T23:37:44.532907+00:00",
+    "command": [
+      "bun",
+      "run",
+      "typecheck"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 122.9
+  },
+  "lint-delivery": {
+    "at": "2026-10-27T23:34:29.995940+00:00",
+    "command": [
+      "bun",
+      "run",
+      "lint"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 266.8
+  },
+  "security-delivery": {
+    "at": "2026-10-27T23:31:05.813696+00:00",
+    "command": [
+      "bun",
+      "run",
+      "security"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 34.21
+  },
+  "audit-delivery": {
+    "at": "2026-10-27T23:30:35.493074+00:00",
+    "command": [
+      "bun",
+      "audit",
+      "--json"
+    ],
+    "exitCode": 1,
+    "durationSeconds": 3.84
+  },
+  "build-delivery": {
+    "at": "2026-10-27T23:38:11.523940+00:00",
+    "command": [
+      "bun",
+      "run",
+      "build"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 461.23
+  },
+  "build-verified": {
+    "at": "2026-10-27T23:43:50.962902+00:00",
+    "command": [
+      "bun",
+      "run",
+      "build"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 220.87
+  },
+  "lint-verified": {
+    "at": "2026-10-27T23:44:16.037168+00:00",
+    "command": [
+      "bun",
+      "run",
+      "lint"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 100.81
+  },
+  "full-tests-gateway": {
+    "at": "2026-10-27T23:47:44.115302+00:00",
+    "command": [
+      "bun",
+      "run",
+      "test"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 32.29
+  },
+  "proxy-regression": {
+    "at": "2026-10-27T23:47:01.191765+00:00",
+    "command": [
+      "bun",
+      "test",
+      "apps/web/src/lib/geometry-export-proxy.test.ts"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.33
+  },
+  "typecheck-verified": {
+    "at": "2026-10-27T23:45:54.919859+00:00",
+    "command": [
+      "bun",
+      "run",
+      "typecheck"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 78.91
+  },
+  "credential-scan-verified": {
+    "at": "2026-10-27T23:46:14.512209+00:00",
+    "command": [
+      "bun",
+      "--env-file=apps/api/.env",
+      ".accessops-local/geometry-benchmark/scan.ts"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 6.8
+  },
+  "full-tests-delivery-final": {
+    "at": "2026-10-27T23:50:51.175599+00:00",
+    "command": [
+      "bun",
+      "run",
+      "test"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 27.39
+  },
+  "build-gateway": {
+    "at": "2026-10-27T23:49:43.465781+00:00",
+    "command": [
+      "bun",
+      "run",
+      "build"
+    ],
+    "exitCode": 1,
+    "durationSeconds": 89.3
+  },
+  "gateway-typecheck": {
+    "at": "2026-10-27T23:50:36.627050+00:00",
+    "command": [
+      "bun",
+      "run",
+      "--cwd",
+      "apps/web",
+      "typecheck"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 13.88
+  },
+  "stl-map-inspection": {
+    "at": "2026-10-27T23:50:49.907881+00:00",
+    "command": [
+      "bun",
+      "apps/api/scripts/geometry-benchmark/check-stl.ts",
+      ".accessops-local/geometry-benchmark/demo/map.stl"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.39
+  },
+  "stl-legend-inspection": {
+    "at": "2026-10-27T23:50:50.215509+00:00",
+    "command": [
+      "bun",
+      "apps/api/scripts/geometry-benchmark/check-stl.ts",
+      ".accessops-local/geometry-benchmark/demo/legend.stl"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.17
+  },
+  "build-delivery-final": {
+    "at": "2026-10-27T23:51:30.008290+00:00",
+    "command": [
+      "bun",
+      "run",
+      "build"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 33.32
+  },
+  "lint-delivery-final": {
+    "at": "2026-10-27T23:52:15.827234+00:00",
+    "command": [
+      "bun",
+      "run",
+      "lint"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 65.86
+  },
+  "credential-scan-final": {
+    "at": "2026-10-27T23:54:10.152098+00:00",
+    "command": [
+      "bun",
+      "--env-file=apps/api/.env",
+      ".accessops-local/geometry-benchmark/scan.ts"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 10.14
+  },
+  "security-final": {
+    "at": "2026-10-27T23:54:04.139748+00:00",
+    "command": [
+      "bun",
+      "run",
+      "security"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 2.96
+  }
+}

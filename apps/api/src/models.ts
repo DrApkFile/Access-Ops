@@ -223,7 +223,7 @@ modelRoutes.get('/:id/model/review-details',async c=>{
 modelRoutes.post('/:id/model/measurement-review',async c=>{
  const parsed=z.object({expectedVersion:z.number().int().positive(),correction:measurementCorrectionSchema}).strict().safeParse(await c.req.json())
  if(!parsed.success)return c.json({error:'Invalid measurement correction'},422)
- const latest=await latestModelRow(c.req.param('id'))
+ const latest=await latestModelRow(c.req.param('id')!)
  if(!latest)return c.json({error:'No floor model'},404)
  if(latest.version!==parsed.data.expectedVersion)return c.json({error:'MODEL_VERSION_CONFLICT'},409)
  let next:FloorModel
@@ -248,7 +248,7 @@ export async function runGeometryReview(projectId:string,expectedVersion:number,
 for(const stage of ['doorway-audit','critique'] as const)modelRoutes.post('/:id/model/'+stage,requirePermission('review'),async c=>{
  const body=z.object({expectedVersion:z.number().int().positive()}).strict().safeParse(await c.req.json())
  if(!body.success)return c.json({error:'Expected model version required'},422)
- const latest=await latestModelRow(c.req.param('id'))
+ const latest=await latestModelRow(c.req.param('id')!)
  if(!latest)return c.json({error:'No floor model'},404)
  if(latest.version!==body.data.expectedVersion)return c.json({error:'MODEL_VERSION_CONFLICT'},409)
  const ready=selectedVisionReadiness(c.get('principal').workspaceId)

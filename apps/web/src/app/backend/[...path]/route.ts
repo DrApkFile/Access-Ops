@@ -76,6 +76,9 @@ async function forward(
       'content-disposition',
       'set-cookie',
       'x-request-id',
+      'x-floor-model-version',
+      'x-tactile-design-id',
+      'x-geometry-status',
       'retry-after',
       'content-security-policy',
     ]) {

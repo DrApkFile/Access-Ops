@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-27T23:30:04.738Z",
+  "at": "2026-10-27T23:46:19.361Z",
   "classification": "LIVE_END_TO_END_WITH_EXPLICIT_OPERATOR_CORRECTIONS",
   "status": "PASS",
   "projectId": "01a17f95-3703-7000-885c-2d2e25b59271",
@@ -18,6 +18,12 @@
   "comparison": {
     "status": "PASS",
     "failures": [],
+    "validity": {
+      "schema": "PASS",
+      "boundaryValid": true,
+      "openingNeedsReview": false,
+      "physicalScaleConfirmed": true
+    },
     "tolerances": {
       "positionMeters": 0.15,
       "positionPixels": 12,

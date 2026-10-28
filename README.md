@@ -2,6 +2,9 @@
 
 Current vision: **OpenRouter `nvidia/nemotron-3.5-super-vl:free`**, tested with real synthetic PNG/PDF upload, parser, critique, doorway audit and persisted history. NVIDIA Nemotron Lightning remains the independently verified text provider. Free-only routing and workspace consent are enforced. See [current vision setup/evidence](docs/vision-provider-evaluation.md). Earlier Gemini notices below are historical.
 
+Geometry accuracy and correction evidence: [eight-case benchmark](docs/geometry-benchmark.md), [actual upload → correction → history → STL walkthrough](docs/geometry-demo-runbook.md), and [delivery results](docs/geometry-delivery.md). All eight returned structured geometry, but only one passed the raw geometry/uncertainty benchmark; successful parsing is not a claim of accurate geometry.
+
+
 
 Current Gemini replacement-key test: model discovery succeeds, but three real synthetic-image requests returned403 because Google denies this project the free tier. No billing was enabled and no vision extraction succeeded. NVIDIA text configuration is unchanged. See [current integration status](docs/live-integration-verification.md).
 

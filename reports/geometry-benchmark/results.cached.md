@@ -1,6 +1,6 @@
 # Synthetic geometry benchmark
 
-CACHED_LIVE_REPLAY, 2026-10-27T23:21:38.800Z. 8/8 structured extractions; 1/8 geometry/uncertainty cases passed. No manual correction is included in accuracy scores.
+CACHED_LIVE_REPLAY, 2026-10-27T23:39:26.690Z. 8/8 structured extractions; 1/8 geometry/uncertainty cases passed. No manual correction is included in accuracy scores.
 
 Ground-truth reference scale is used only for scoring; it is never fed to inference. Source-image coordinates are compared without fitted alignment or rescaling. Pixel positions are estimates; these tolerances are demonstration thresholds, not accessibility certification.
 
@@ -15,4 +15,4 @@ Ground-truth reference scale is used only for scoring; it is never fed to infere
 | 07-ambiguous-door | PASS | CACHED_LIVE | 0.000 / 0.000 reference m | 5.00 | 0.00 / — | BLOCKED_REVIEW | within configured tolerances |
 | 08-unknown-scale | FAIL | CACHED_LIVE | 0.000 / 0.000 px | 4.00 | 4.00 / 0.00 | BLOCKED_REVIEW | Room dimensions/boundary outside tolerance: ROOM A |
 
-Full per-room/per-door errors, missing/extra counts, uncertainty, annotated versus derived dimensions and model receipts are in results.json. Export blocks are recorded rather than bypassed. The full user-visible corrected-STL demo is reported separately.
+Full per-room/per-door errors, missing/extra counts, uncertainty, annotated versus derived dimensions and model receipts are in results.cached.json. Export blocks are recorded rather than bypassed. The full user-visible corrected-STL demo is reported separately.

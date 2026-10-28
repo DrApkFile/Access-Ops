@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-27T23:21:38.800Z",
+  "at": "2026-10-27T23:39:26.690Z",
   "model": "nvidia/nemotron-3.5-super-vl:free",
   "provider": "openrouter",
   "mode": "CACHED_LIVE_REPLAY",
@@ -62,6 +62,12 @@
           "Door position/width/host outside tolerance: entry",
           "Wall coverage/position outside tolerance"
         ],
+        "validity": {
+          "schema": "PASS",
+          "boundaryValid": true,
+          "openingNeedsReview": false,
+          "physicalScaleConfirmed": false
+        },
         "tolerances": {
           "positionMeters": 0.15,
           "positionPixels": 12,
@@ -269,7 +275,7 @@
         ],
         "reason": "No authoritative STL is generated from unresolved assumptions. Use actual review/correction or explicit provisional acknowledgment."
       },
-      "durationMs": 160
+      "durationMs": 129
     },
     {
       "id": "02-connected",
@@ -320,6 +326,12 @@
           "Missing door connection",
           "Extra rooms or doors"
         ],
+        "validity": {
+          "schema": "PASS",
+          "boundaryValid": true,
+          "openingNeedsReview": true,
+          "physicalScaleConfirmed": false
+        },
         "tolerances": {
           "positionMeters": 0.15,
           "positionPixels": 12,
@@ -657,7 +669,7 @@
         ],
         "reason": "No authoritative STL is generated from unresolved assumptions. Use actual review/correction or explicit provisional acknowledgment."
       },
-      "durationMs": 199
+      "durationMs": 47
     },
     {
       "id": "03-l-shape",
@@ -704,6 +716,12 @@
         "failures": [
           "Door position/width/host outside tolerance: entry"
         ],
+        "validity": {
+          "schema": "PASS",
+          "boundaryValid": true,
+          "openingNeedsReview": false,
+          "physicalScaleConfirmed": false
+        },
         "tolerances": {
           "positionMeters": 0.15,
           "positionPixels": 12,
@@ -911,7 +929,7 @@
         ],
         "reason": "No authoritative STL is generated from unresolved assumptions. Use actual review/correction or explicit provisional acknowledgment."
       },
-      "durationMs": 208
+      "durationMs": 72
     },
     {
       "id": "04-rotated",
@@ -960,6 +978,12 @@
           "Door position/width/host outside tolerance: entry",
           "Wall coverage/position outside tolerance"
         ],
+        "validity": {
+          "schema": "PASS",
+          "boundaryValid": true,
+          "openingNeedsReview": true,
+          "physicalScaleConfirmed": false
+        },
         "tolerances": {
           "positionMeters": 0.15,
           "positionPixels": 12,
@@ -1182,7 +1206,7 @@
         ],
         "reason": "No authoritative STL is generated from unresolved assumptions. Use actual review/correction or explicit provisional acknowledgment."
       },
-      "durationMs": 61
+      "durationMs": 35
     },
     {
       "id": "05-low-resolution",
@@ -1231,6 +1255,12 @@
           "Door position/width/host outside tolerance: entry",
           "Wall coverage/position outside tolerance"
         ],
+        "validity": {
+          "schema": "PASS",
+          "boundaryValid": true,
+          "openingNeedsReview": false,
+          "physicalScaleConfirmed": false
+        },
         "tolerances": {
           "positionMeters": 0.15,
           "positionPixels": 12,
@@ -1438,7 +1468,7 @@
         ],
         "reason": "No authoritative STL is generated from unresolved assumptions. Use actual review/correction or explicit provisional acknowledgment."
       },
-      "durationMs": 9
+      "durationMs": 47
     },
     {
       "id": "06-missing-dimension",
@@ -1533,6 +1563,12 @@
         "failures": [
           "Door position/width/host outside tolerance: entry"
         ],
+        "validity": {
+          "schema": "PASS",
+          "boundaryValid": true,
+          "openingNeedsReview": false,
+          "physicalScaleConfirmed": false
+        },
         "tolerances": {
           "positionMeters": 0.15,
           "positionPixels": 12,
@@ -1733,7 +1769,7 @@
         ],
         "reason": "No authoritative STL is generated from unresolved assumptions. Use actual review/correction or explicit provisional acknowledgment."
       },
-      "durationMs": 10
+      "durationMs": 50
     },
     {
       "id": "07-ambiguous-door",
@@ -1778,6 +1814,12 @@
       "comparison": {
         "status": "PASS",
         "failures": [],
+        "validity": {
+          "schema": "PASS",
+          "boundaryValid": true,
+          "openingNeedsReview": true,
+          "physicalScaleConfirmed": false
+        },
         "tolerances": {
           "positionMeters": 0.15,
           "positionPixels": 12,
@@ -2115,6 +2157,12 @@
         "failures": [
           "Room dimensions/boundary outside tolerance: ROOM A"
         ],
+        "validity": {
+          "schema": "PASS",
+          "boundaryValid": true,
+          "openingNeedsReview": false,
+          "physicalScaleConfirmed": false
+        },
         "tolerances": {
           "positionMeters": 0.15,
           "positionPixels": 12,
@@ -2316,7 +2364,7 @@
         ],
         "reason": "No authoritative STL is generated from unresolved assumptions. Use actual review/correction or explicit provisional acknowledgment."
       },
-      "durationMs": 5
+      "durationMs": 51
     }
   ]
 }

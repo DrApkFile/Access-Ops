@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-27T23:53:15.423Z",
+  "projectId": "01a17f95-3703-7000-885c-2d2e25b59271",
+  "classification": "LOCAL_INTEGRATION_POST_RESTART_BROWSER",
+  "results": [
+    {
+      "step": "Post-restart saved corrected model and calibration",
+      "status": "PASS"
+    },
+    {
+      "step": "Post-restart uncertainty/provenance panel visible",
+      "status": "PASS"
+    },
+    {
+      "step": "Specific corrected door provenance visible",
+      "status": "PASS"
+    },
+    {
+      "step": "Original historical extracted version reopened after restart",
+      "status": "PASS"
+    },
+    {
+      "step": "Opening history did not overwrite current corrections",
+      "status": "PASS"
+    },
+    {
+      "step": "Current STL still downloadable after restart",
+      "status": "PASS",
+      "httpStatus": 200,
+      "bytes": 122584,
+      "version": "11",
+      "geometryStatus": "current"
+    },
+    {
+      "step": "Anonymous geometry read remains denied",
+      "status": "PASS"
+    },
+    {
+      "step": "Fresh page load retains saved correction provenance",
+      "status": "PASS"
+    }
+  ]
+}
