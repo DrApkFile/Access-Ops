@@ -6,7 +6,7 @@ AccessOps brings floor plans, facility directories, accessibility measurements, 
 
 Built on the Bumps floor-plan and tactile-map engine, AccessOps connects two complementary workflows: **reviewing physical space** and **reasoning across building information**.
 
-[Judge’s walkthrough](judgung.md) · [Getting started](#getting-started) · [Technology integrations](#technology-integrations) · [Changelog](changelog.md)
+[Judge’s walkthrough](judging.md) · [Getting started](#getting-started) · [Technology integrations](#technology-integrations) · [Changelog](changelog.md)
 
 ## What you can do
 
